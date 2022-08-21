@@ -1,5 +1,5 @@
 
-public class Truck
+public class Truck extends Vehicle
 {
 
 public double free_Wight;
