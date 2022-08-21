@@ -1,33 +1,35 @@
 
-/**
- * Write a description of class Truck here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Truck
 {
-    // instance variables - replace the example below with your own
-    private int x;
 
-    /**
-     * Constructor for objects of class Truck
-     */
+public double free_Wight;
+public double full_Wight;
+
     public Truck()
     {
-        // initialise instance variables
-        x = 0;
-    }
+    free_Wight=0.0;
+    full_Wight=0.0;
+    length=0;
+       width=0;
+       color=null;
+        Manufacture_Company=null;
+        Manufacture_date=null;
+        model=null;
+        Plate_num=0;
+        Body_serail_num=0;
+}
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+public Truck(double free_Wight,double full_Wight)
+    { 
+    free_Wight=free_Wight;
+    full_Wight=full_Wight;
+     length=length;
+       width=width;
+       color=color;
+      Manufacture_Company=Manufacture_Company;
+      Manufacture_date=Manufacture_date;
+      model=model;
+      Plate_num= Plate_num;
+      Body_serail_num= Body_serail_num;
     }
 }
