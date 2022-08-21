@@ -1,33 +1,35 @@
-
-/**
- * Write a description of class Engine here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.Date;
 public class Engine
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Engine
-     */
+    public String  Manufactur;  
+    public  Date  ManufactureDate;
+    public String  Model;
+    public int Capacity;
+    public  int  Cylinders;
+    
     public Engine()
     {
-        // initialise instance variables
-        x = 0;
+         Manufactur= null;
+         ManufactureDate=null;
+         Model=null;
+         Capacity=0;
+         Cylinders=0;
     }
+    
+    
+     public Engine(String  Manufactur, Date  ManufactureDate,Date Model,int Capacity,int  Cylinders)
+     {
+        Manufactur= Manufactur;
+        ManufactureDate= ManufactureDate;
+        Model=Model;
+        Capacity= Capacity;
+        Cylinders= Cylinders;
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    } 
+    
+    
+    
+    
+    
 }
+
