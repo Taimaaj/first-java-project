@@ -1,33 +1,29 @@
-
-/**
- * Write a description of class Vehicle here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Vehicle
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Vehicle
-     */
+{  public int length;
+    public int  width;
+    public String color;
+    
     public Vehicle()
-    {
-        // initialise instance variables
-        x = 0;
-    }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+   {
+       length=0;
+       width=0;
+       color=null;
+        Manufacture_Company=null;
+        Manufacture_date=null;
+        model=null;
+        Plate_num=0;
+        Body_serail_num=0;
+   }
+   
+    public Vehicle(int length ,int width )
+   {
+        length=length;
+       width=width;
+       color=color;
+      Manufacture_Company=Manufacture_Company;
+      Manufacture_date=Manufacture_date;
+      model=model;
+      Plate_num= Plate_num;
+      Body_serail_num= Body_serail_num;
+   }
 }
