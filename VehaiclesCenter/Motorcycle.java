@@ -1,5 +1,5 @@
 
-public class Motorcycle
+public class Motorcycle extends Automobile
 {
    public  double tier_diameter;
 public  double length;
