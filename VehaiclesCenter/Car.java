@@ -1,5 +1,5 @@
 
-public class Car
+public class Car extends Vehicle
 {
     public int chair_num;
  public boolean is_furnitre_leather;
