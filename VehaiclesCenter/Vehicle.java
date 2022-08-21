@@ -1,4 +1,4 @@
-public class Vehicle
+public class Vehicle extends Automobile
 {  public int length;
     public int  width;
     public String color;
