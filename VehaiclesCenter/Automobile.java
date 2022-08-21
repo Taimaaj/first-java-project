@@ -1,33 +1,34 @@
+import java.util.Date;
 
-/**
- * Write a description of class Automobile here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Automobile
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Automobile
-     */
+    Engine e; 
+    public String Manufacture_Company;
+    public  Date Manufacture_date;
+    public String model ;
+    public int Plate_num ;
+    public int Body_serail_num;
+    
     public Automobile()
     {
-        // initialise instance variables
-        x = 0;
+        Manufacture_Company=null;
+        Manufacture_date=null;
+        model=null;
+        Plate_num=0;
+        Body_serail_num=0;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
+    
+    public Automobile(String Manufacture_Company, Date Manufacture_date,String model , int Plate_num,int Body_serail_num )
     {
-        // put your code here
-        return x + y;
+          Manufacture_Company=Manufacture_Company;
+          Manufacture_date=Manufacture_date;
+          model=model;
+          Plate_num= Plate_num;
+        Body_serail_num= Body_serail_num;
     }
+    
+    
+    
+    
+    
 }
