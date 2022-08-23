@@ -1,40 +1,35 @@
 
 public class Car extends Vehicle
 {
-    public int chair_num;
- public boolean is_furnitre_leather;
-    public Car()
+    public int chairNum;
+    public boolean  isFurnitreLeather;
+ 
+     public Car()
     {
-        chair_num=0;
-        is_furnitre_leather =false;
+        chairNum=0;
+        isFurnitreLeather =false;
         length=0;
        width=0;
        color=null;
-        Manufacture_Company=null;
-        Manufacture_date=null;
-        model=null;
-        Plate_num=0;
-        Body_serail_num=0;
+        manufactureCompany = null;
+      manufactureDate = null;
+        model = null;
+        plateNum = 0;
+       bodySerailNum = 0;
     }
     
-    public Car( int chair_num,boolean is_furnitre_leather) 
+    public Car( int chairNum,boolean  isFurnitreLeather) 
     {
-     chair_num= chair_num;
-     is_furnitre_leather=is_furnitre_leather;
+     chairNum = chairNum ;
+      isFurnitreLeather =isFurnitreLeather ;
       length=length;
        width=width;
        color=color;
-      Manufacture_Company=Manufacture_Company;
-      Manufacture_date=Manufacture_date;
-      model=model;
-      Plate_num= Plate_num;
-      Body_serail_num= Body_serail_num;
-
+      manufactureCompany = manufactureCompany;
+      manufactureDate=manufactureDate;
+          model=model;
+          plateNum=  plateNum;
+        bodySerailNum= bodySerailNum;
     }
     
-    
-    public int Add (int chair_num)
-    {
-        return  chair_num  ;
-    }
 }
