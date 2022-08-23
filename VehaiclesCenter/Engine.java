@@ -1,29 +1,29 @@
 import java.util.Date;
 public class Engine
 {
-    public String  Manufactur;  
-    public  Date  ManufactureDate;
-    public String  Model;
-    public int Capacity;
-    public  int  Cylinders;
+    public String  manufactur;  
+    public  Date  manufactureDate;
+    public String  model;
+    public int capacity;
+    public  int  cylinders;
     
     public Engine()
     {
-         Manufactur= null;
-         ManufactureDate=null;
-         Model=null;
-         Capacity=0;
-         Cylinders=0;
+         manufactur= null;
+         manufactureDate=null;
+         model=null;
+         capacity=0;
+         cylinders=0;
     }
     
     
-     public Engine(String  Manufactur, Date  ManufactureDate,Date Model,int Capacity,int  Cylinders)
+     public Engine(String  manufactur, Date  manufactureDate,Date model,int capacity,int cylinders)
      {
-        Manufactur= Manufactur;
-        ManufactureDate= ManufactureDate;
-        Model=Model;
-        Capacity= Capacity;
-        Cylinders= Cylinders;
+       manufactur= manufactur;
+       manufactureDate= manufactureDate;
+        model=model;
+        capacity= capacity;
+        cylinders= cylinders;
 
     } 
     
