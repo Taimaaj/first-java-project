@@ -2,34 +2,33 @@
 public class Truck extends Vehicle
 {
 
-public double free_Wight;
-public double full_Wight;
-
-    public Truck()
+public double freeWight;
+public double fullWight;
+  public Truck()
     {
-    free_Wight=0.0;
-    full_Wight=0.0;
+    freeWight=0.0;
+    fullWight=0.0;
     length=0;
        width=0;
        color=null;
-        Manufacture_Company=null;
-        Manufacture_date=null;
-        model=null;
-        Plate_num=0;
-        Body_serail_num=0;
+        manufactureCompany = null;
+      manufactureDate = null;
+        model = null;
+        plateNum = 0;
+       bodySerailNum = 0;
 }
 
-public Truck(double free_Wight,double full_Wight)
+public Truck(double freeWight,double fullWight)
     { 
-    free_Wight=free_Wight;
-    full_Wight=full_Wight;
+    freeWight= freeWight;
+    fullWight=fullWight;
      length=length;
        width=width;
        color=color;
-      Manufacture_Company=Manufacture_Company;
-      Manufacture_date=Manufacture_date;
-      model=model;
-      Plate_num= Plate_num;
-      Body_serail_num= Body_serail_num;
+       manufactureCompany = manufactureCompany;
+      manufactureDate=manufactureDate;
+          model=model;
+          plateNum=  plateNum;
+        bodySerailNum= bodySerailNum;
     }
 }
