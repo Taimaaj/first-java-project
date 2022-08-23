@@ -1,27 +1,29 @@
 
 public class Motorcycle extends Automobile
 {
-   public  double tier_diameter;
+public  double tierDiameter;
 public  double length;
+
 public Motorcycle()
 {
-     tier_diameter=0.0;
+     tierDiameter = 0.0;
      length=0.0;
-      Manufacture_Company=null;
-        Manufacture_date=null;
-        model=null;
-        Plate_num=0;
-        Body_serail_num=0;
+     manufactureCompany = null;
+     manufactureDate = null;
+     model = null;
+     plateNum = 0;
+     bodySerailNum = 0;
 }
-public Motorcycle(double tier_diameter,double length)
+
+public Motorcycle(double tierDiameter,double length)
 {
-    tier_diameter=tier_diameter;
+    tierDiameter = tierDiameter;
     length=length;
-    Manufacture_Company=Manufacture_Company;
-      Manufacture_date=Manufacture_date;
-      model=model;
-      Plate_num= Plate_num;
-      Body_serail_num= Body_serail_num;
+    manufactureCompany = manufactureCompany;
+    manufactureDate=manufactureDate;
+    model=model;
+    plateNum=  plateNum;
+    bodySerailNum= bodySerailNum;
 }
 
 }
