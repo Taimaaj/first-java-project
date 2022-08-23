@@ -5,25 +5,26 @@ public class Vehicle extends Automobile
     
     public Vehicle()
    {
-       length=0;
-       width=0;
-       color=null;
-        Manufacture_Company=null;
-        Manufacture_date=null;
-        model=null;
-        Plate_num=0;
-        Body_serail_num=0;
+      length=0;
+      width=0;
+      color=null;
+      manufactureCompany = null;
+      manufactureDate = null;
+      model = null;
+      plateNum = 0;
+      bodySerailNum = 0;
    }
+   
    
     public Vehicle(int length ,int width )
    {
-        length=length;
-       width=width;
-       color=color;
-      Manufacture_Company=Manufacture_Company;
-      Manufacture_date=Manufacture_date;
-      model=model;
-      Plate_num= Plate_num;
-      Body_serail_num= Body_serail_num;
+       length = length;
+       width = width;
+       color = color;
+       manufactureCompany = manufactureCompany;
+       manufactureDate = manufactureDate;
+       model = model;
+       plateNum =  plateNum;
+       bodySerailNum = bodySerailNum;
    }
 }
