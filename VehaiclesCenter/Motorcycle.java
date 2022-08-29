@@ -6,6 +6,7 @@ public  double length;
 
 public Motorcycle()
 {
+public Motorcycle(){
      tierDiameter = 0.0;
      length=0.0;
      manufactureCompany = null;
