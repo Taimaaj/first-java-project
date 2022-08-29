@@ -1,34 +1,25 @@
 import java.util.Date;
+public class Automobile {
+    Engine Engine; 
+    
+    public  String  manufactureCompany;
+    public  String  model ;
+    public  String  plateNum ;
+    public  String  bodySerailNum;
+    public  Date    manufactureDate;
 
-public class Automobile
-{
-    Engine e; 
-    public String manufactureCompany;
-    public  Date manufactureDate;
-    public String model ;
-    public int plateNum ;
-    public int bodySerailNum;
-    
-    public Automobile()
-    {
-       manufactureCompany = null;
-      manufactureDate = null;
-        model = null;
-        plateNum = 0;
-       bodySerailNum = 0;
+    public Automobile(){
+       manufactureCompany =notdecided          ;
+       manufactureDate    = 0/0/0000;
+       bodySerailNum   =            ;
+       model  =  null               ;
+       plateNum  =                  ;
     }
-    
-    public Automobile(String manufactureCompany ,Date manufactureDate,String model , int  plateNum ,int bodySerailNum )
-    {
+    public Automobile(String manufactureCompany ,Date manufactureDate,String model ,String plateNum ,String bodySerailNum ){
       manufactureCompany = manufactureCompany;
       manufactureDate=manufactureDate;
-          model=model;
-          plateNum=  plateNum;
-        bodySerailNum= bodySerailNum;
+      model=model;
+      plateNum=  plateNum;
+      bodySerailNum= bodySerailNum;
+    } 
     }
-    
-    
-    
-    
-    
-}
