@@ -5,20 +5,20 @@ import java.util.Date;
     public String     model;
     public int        capacity;
     public int        cylinders;
-    public FuelType   FuelType;
+    public FuelType   fuelType;
 
     public Engine() {
-         manufactur= null;
-         manufactureDate=null;
-         FuelType model=null;
+         manufactur = "notdecided";
+         manufactureDate = null;
+         model="notdecided";
          capacity=0;
          cylinders=0;
     }
     
-     public Engine(String  manufactur, Date  manufactureDate,Date model,int capacity,int cylinders){
+     public Engine(String  manufactur, Date  manufactureDate,String model,int capacity,int cylinders){
        this.manufactur= manufactur;
        this.manufactureDate= manufactureDate;
-       model=model;
+       this.model = model;
        this. capacity= capacity;
        this. cylinders= cylinders;
 
