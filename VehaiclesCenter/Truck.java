@@ -1,4 +1,3 @@
-
     public class Truck extends Vehicle{
     public double freeWight;
     public double fullWight;
@@ -7,14 +6,12 @@
        fullWight = 0.0;
        length = 0;
        width = 0;
-       color="";
-       manufactureCompany = "" ;
+       color = "notdecided";
+       manufactureCompany ="notdecided";
        manufactureDate = null;
-       bodySerailNum = "";
-       model =  ""  ;
-       plateNum  =   "" ;
-    }
-
+       bodySerailNum = "notdecided";
+       model = "notdecided" ;
+     }
     public Truck(double freeWight,double fullWight)
     { 
       this.freeWight = freeWight;
