@@ -2,19 +2,16 @@
     public int      length;
     public int      width;
     public String   color;
-    
     public Vehicle(){
        length = 0;
        width = 0;
-       color="";
-       manufactureCompany = "" ;
+       color = "notdecided";
+       manufactureCompany ="notdecided";
        manufactureDate = null;
-       bodySerailNum = "";
-       model =  ""  ;
-       plateNum  =   "" ;
+       bodySerailNum = "notdecided";
+       model = "notdecided" ;
     }
-
-    public Vehicle(int length ,int width ){
+    public Vehicle(int length ,int width,String   color ){
       this.length = length;
       this.width = width;
       this.color = color;
