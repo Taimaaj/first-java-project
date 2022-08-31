@@ -1,3 +1,5 @@
+import java.util.Date;
+
     public class Truck extends Vehicle{
     public double freeWight;
     public double fullWight;
@@ -5,10 +7,10 @@
        freeWight = 0.0;
        fullWight = 0.0;
        length = 0;
-       width = 0;
+       color = "White";
        color = "notdecided";
        manufactureCompany ="notdecided";
-       manufactureDate = null;
+       manufactureDate = new  Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided" ;
      }
