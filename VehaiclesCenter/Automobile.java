@@ -6,13 +6,13 @@ import java.util.Date;
     public  String    plateNum ;
     public  String    bodySerailNum;
     public  Date      manufactureDate;
-    public  GearType  gearType;
+    public  GearType  undefined;
     public Automobile(){
        manufactureCompany ="notdecided";
-       manufactureDate = null;
+       manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided" ;
-    }
+     }
     public Automobile(String manufactureCompany ,Date manufactureDate,String model ,String plateNum ,String bodySerailNum ){
       this.manufactureCompany = manufactureCompany;
       this.manufactureDate = manufactureDate;
