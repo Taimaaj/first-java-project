@@ -5,11 +5,11 @@ import java.util.Date;
     public String     model;
     public int        capacity;
     public int        cylinders;
-    public FuelType   fuelType;
+    public FuelType   undefined;
 
     public Engine() {
          manufactur = "notdecided";
-         manufactureDate = null;
+        manufactureDate = new Date(01-01-1970);
          model="notdecided";
          capacity=0;
          cylinders=0;
