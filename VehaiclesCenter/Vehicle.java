@@ -1,3 +1,5 @@
+import java.util.Date;
+
     public class Vehicle extends Automobile{  
     public int      length;
     public int      width;
@@ -5,9 +7,9 @@
     public Vehicle(){
        length = 0;
        width = 0;
-       color = "notdecided";
+       color = "White";
        manufactureCompany ="notdecided";
-       manufactureDate = null;
+       manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided" ;
     }
