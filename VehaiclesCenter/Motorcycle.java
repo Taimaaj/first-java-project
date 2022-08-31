@@ -1,3 +1,5 @@
+import java.util.Date;
+
      public class Motorcycle extends Automobile{
      public  double tierDiameter;
      public  double length;
@@ -5,7 +7,7 @@
        tierDiameter = 0.0;
        length = 0.0;
        manufactureCompany ="notdecided";
-       manufactureDate = null;
+       manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided" ;
      }
