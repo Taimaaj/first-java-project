@@ -1,3 +1,5 @@
+import java.util.Date;
+
     public class Car extends Vehicle{
     public  int      chairNum;
     public  boolean  isFurnitreLeather;
@@ -6,15 +8,15 @@
        isFurnitreLeather = false;
        length = 0;
        width = 0;
-       color = "notdecided";
+       color = "White";
        manufactureCompany ="notdecided";
-       manufactureDate = null;
+       manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided" ;
     }
     public Car( int chairNum,boolean  isFurnitreLeather) {
       this.chairNum = chairNum ;
-      this.isFurnitreLeather =  isFurnitreLeather ;
+      this.isFurnitreLeather =  isFurnitreLeather;
       this.length = length;
       this.width = width;
       this.color = color;
