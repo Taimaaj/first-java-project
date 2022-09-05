@@ -1,5 +1,3 @@
-public enum GearType
-{
-     Normal ,Automatic 
-
+public enum GearType{
+     Normal ,Automatic,UNDECIDED   
 }
