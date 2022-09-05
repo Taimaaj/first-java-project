@@ -11,6 +11,7 @@
        manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
        model = "notdecided";
+       plateNum = "notdecided";
     }
     public Vehicle(int length ,int width,String color){
       this.length = length;
