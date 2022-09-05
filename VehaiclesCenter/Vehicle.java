@@ -1,19 +1,18 @@
-import java.util.Date;
-
+    import java.util.Date;
     public class Vehicle extends Automobile{  
-    public int      length;
-    public int      width;
+    public double   length;
+    public double   width;
     public String   color;
     public Vehicle(){
-       length = 0;
-       width = 0;
+       length = 0.0;
+       width = 0.0;
        color = "White";
        manufactureCompany ="notdecided";
        manufactureDate = new Date(01-01-1970);
        bodySerailNum = "notdecided";
-       model = "notdecided" ;
+       model = "notdecided";
     }
-    public Vehicle(int length ,int width,String   color ){
+    public Vehicle(int length ,int width,String color){
       this.length = length;
       this.width = width;
       this.color = color;
@@ -21,6 +20,6 @@ import java.util.Date;
       this.manufactureDate = manufactureDate;
       this.model = model;
       this.plateNum = plateNum;
-      this.bodySerailNum =  bodySerailNum;
+      this.bodySerailNum = bodySerailNum;
     }
     }
