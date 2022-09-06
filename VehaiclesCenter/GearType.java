@@ -1,3 +1,5 @@
 public enum GearType{
-     Normal ,Automatic,UNDECIDED   
+ UNDECIDED,
+ NORMAL,
+ AUTOMATIC 
 }
