@@ -5,7 +5,7 @@
     public Truck(){
        freeWight = 0.0;
        fullWight = 0.0;
-       length = 0;
+       length = 0.0;
        width = 0.0;
        color = "White";
        manufactureCompany = "notdecided";
@@ -26,4 +26,4 @@
       this.plateNum = plateNum;
       this.bodySerailNum = bodySerailNum;
     }
-}
+    }
