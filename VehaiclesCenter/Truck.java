@@ -1,3 +1,4 @@
+    import java.util.Scanner;
     import java.util.Date;
     public class Truck extends Vehicle{
     public double freeWight;
@@ -25,5 +26,23 @@
       this.model = model;
       this.plateNum = plateNum;
       this.bodySerailNum = bodySerailNum;
+    }
+    public double getFreeWight() {
+    return freeWight;
+    }
+    public void setFreeWight(double freeWight) {
+    this.freeWight = freeWight;
+    }
+    public double getFullWight() {
+    return fullWight;
+    }
+    public void setFullWight(double fullWight) {
+     this.fullWight = fullWight;
+    }
+    public void print() {
+    System.out.println("--- Truck ---");
+    super.print();
+    System.out.println("Free weight: " + this.getFreeWight());
+    System.out.println("Full weight: " + this.getFullWight());
     }
     }
