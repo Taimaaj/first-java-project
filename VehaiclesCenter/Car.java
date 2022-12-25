@@ -1,8 +1,8 @@
-   import java.util.Date;
+    import java.util.Date;
     public class Car extends Vehicle{
     public  int      chairNum;
     public  boolean  isFurnitreLeather;
-      public Car(){
+    public Car(){
        chairNum = 5;
        isFurnitreLeather = false;
        length = 0.0;
@@ -13,7 +13,7 @@
        bodySerailNum = "notdecided";
        model = "notdecided" ;
     }
-    public Car( int chairNum,boolean  isFurnitreLeather) {
+    public Car( int chairNum,boolean isFurnitreLeather) {
       this.chairNum = chairNum ;
       this.isFurnitreLeather =  isFurnitreLeather;
       this.length = length;
@@ -24,5 +24,34 @@
       this.model = model;
       this.plateNum = plateNum;
       this.bodySerailNum =  bodySerailNum;
+    }
+    Car(Car c){
+       chairNum = c.chairNum;
+       isFurnitreLeather =c.isFurnitreLeather;
+       length = c.length;
+       width = c.width;
+       color = c.color;
+       manufactureCompany =c.manufactureCompany;
+       manufactureDate = c. manufactureDate;
+       bodySerailNum = c.bodySerailNum;
+       model = c.model ;
+    }
+    public int getChairNum() {
+    return chairNum;
+    }
+    public void setChairNum(int chairNum) {
+    this.chairNum = chairNum;
+    }
+    public boolean isFurnitureLeather() {
+    return isFurnitreLeather;
+    }
+    public void setFurnitureLeather(boolean furnitureLeather) {
+    isFurnitreLeather = furnitureLeather;
+    }
+    public void print() {
+    System.out.println("--- Car ---");
+    super.print(); 
+    System.out.println("Chair number: " + this.getChairNum());
+    System.out.println("Is furniture leather: " + this.isFurnitureLeather());
     }
     }
