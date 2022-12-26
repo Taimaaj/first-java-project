@@ -1,20 +1,24 @@
     import java.util.Date;
+    import java.text.ParseException;
+    import java.text.SimpleDateFormat;
+    import java.util.Date;
+    import java.util.Scanner;
     public class Engine{
     public  String     manufactur;  
-    public  String     manufactureDate;
+    public  Date     manufactureDate;
     public  String     model;
     public  int        capacity;
     public  int        cylinders;
     public FuelType   fuelType;
     public Engine() {
          manufactur = "notdecided";
-         manufactureDate ="";
+         manufactureDate =new Date(01-01-1970);
          model = "notdecided";
          capacity = 0;
          cylinders = 0;
          fuelType = fuelType.UNDEFINED;
         }
-    public Engine(String  manufactur, String  manufactureDate,String model,int capacity,int cylinders,FuelType fuelType){
+    public Engine(String  manufactur, Date  manufactureDate,String model,int capacity,int cylinders,FuelType fuelType){
        this.manufactur = manufactur;
        this.manufactureDate = manufactureDate;
        this.model = model;
@@ -27,12 +31,6 @@
     }
     public void setManufacture(String manufacture) {
         this.manufactur = manufacture;
-    }
-    public String getManufactureDate() {
-        return manufactureDate;
-    }
-    public void setManufactureDate(String manufactureDate) {
-        this.manufactureDate = manufactureDate;
     }
     public String getModel() {
         return model;
@@ -58,10 +56,17 @@
     public void setFuelType(FuelType fuelType) {
         this.fuelType = fuelType;
     }
-    public void print() {
+    public Date setManufactureDate() throws ParseException {
+    Scanner scanner = new Scanner(System.in);
+    String manufactureDateStr = scanner.nextLine();
+    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+    this.manufactureDate = formatter.parse(manufactureDateStr);
+    return manufactureDate;
+    }
+    public void print() throws ParseException {
     System.out.println("--- Engine ---");
     System.out.println("Manufacture: " + this.getmanufactur());
-    System.out.println("Manufacture date: " + this.getManufactureDate());
+    System.out.println("Manufacture date: " + this.setManufactureDate());
     System.out.println("Model: " + this.getModel());
     System.out.println("Capacity: " + this.getCapacity());
     System.out.println("Cylinders: " + this.getCylinders());
