@@ -1,9 +1,10 @@
+import java.text.ParseException;
+
     import java.util.Scanner;
     import java.lang.String;
     import java.util.*; 
     import java.time.LocalDate;
     public class Main{
-        
     public static void main(String args[])  {
        List<Car> carList = new ArrayList<Car>();
        List<Truck> truckList = new ArrayList<Truck>();
@@ -12,7 +13,7 @@
        System.out.println("please Enter your name");
        Scanner username = new Scanner (System.in);
        String name = username.nextLine();
-       System.out.println("Welcome dear "+username);
+       System.out.println("Welcome dear "+name);
        System.out.println("___________________________________________________________________________________________________________________________________________");
        System.out.println("Enter Vechicle type");
        System.out.println ( "1) Car (1)\n2) Truck (2)\n3) Motorcycle (3)" );
@@ -36,7 +37,11 @@
         engineObj.manufactur = car.next();
         System.out.println("___________________________________________________________________________________________________________________________________________");
         System.out.println(">Please enter the manufactureDate of the engine: ");
-        engineObj. manufactureDate = car.next();
+        try {
+          engineObj.setManufactureDate();
+        } catch (ParseException e){
+           System.out.println("Invalid date format. Please enter the date in");
+        }
         System.out.println("___________________________________________________________________________________________________________________________________________");
         System.out.println(">Please enter the model of the engine: ");       
         engineObj. model = car.next();
@@ -102,22 +107,19 @@
                 System.out.println ( "Unrecognized option" );
               }
         System.out.println("___________________________________________________________________________________________________________________________________________");
-        System.out.print("\n>Please enter chairNum of the car: ");
+        System.out.print(">Please enter chairNum of the car: ");
         carObj.chairNum= car.nextInt();
-        System.out.println("___________________________________________________________________________________________________________________________________________");
-        System.out.println(">Please enter if isFurnitreLeather of car: ");
-        while (true) {
-              String _isFurnitreLeather = car.nextLine();
-             try {
-                boolean isFurnitreLeather = Boolean.parseBoolean(_isFurnitreLeather);
-              //  carObj.setisFurnitreLeather(isFurnitreLeather);
-                break;
-             } catch (IllegalArgumentException e) {
-                System.out.println("Invalid input. Please try again.");
-             }}
+        System.out.println("___________________________________________________________________________________________________________________________________________"); 
+        System.out.println(">Please enter if isFurnitreLeather of car (t/f): ");
+        carObj.setIsFurnitureLeather();
         System.out.println("___________________________________________________________________________________________________________________________________________");
         System.out.println(">Please enter the manufactureDate of car: ");
-        //carObj.manufactureDate=car.nextDate();
+        try {
+              carObj.setManufactureDate();
+        } catch (ParseException e) {
+          System.out.println("Invalid date format. Please enter the date in");
+        }
+        System.out.println("___________________________________________________________________________________________________________________________________________");
         carObj.engine = engineObj;     
         System.out.println("You have successfully added a new Car to the vehicle center!");
         carObj.print();
