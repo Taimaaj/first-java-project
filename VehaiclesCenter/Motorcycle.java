@@ -37,7 +37,6 @@
     System.out.println("Manufacture company: " + this.getManufactureCompany());
     System.out.println("Manufacture date: " + this.getManufactureDate());
     System.out.println("Model: " + this.getModel());
-    this.getEngine().print();
     System.out.println("Plate number: " + this.getPlateNum());
     System.out.println("Gear type: " + this.getGearType());
     System.out.println("Body serial number: " + this.getBodySerialNum());
