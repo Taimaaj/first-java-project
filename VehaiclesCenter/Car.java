@@ -1,3 +1,4 @@
+    import java.util.Scanner;
     import java.util.Date;
     public class Car extends Vehicle{
     public  int      chairNum;
@@ -42,16 +43,20 @@
     public void setChairNum(int chairNum) {
     this.chairNum = chairNum;
     }
-    public boolean isFurnitureLeather() {
-    return isFurnitreLeather;
+    public boolean setIsFurnitureLeather() {
+    Scanner scanner = new Scanner(System.in);
+    String furnitureType = scanner.nextLine();
+    if (furnitureType.equals("t")) {
+      this.isFurnitreLeather = true;
+    } else {
+      this.isFurnitreLeather = false;
     }
-    public void setFurnitureLeather(boolean furnitureLeather) {
-    isFurnitreLeather = furnitureLeather;
+    return isFurnitreLeather;
     }
     public void print() {
     System.out.println("--- Car ---");
     super.print(); 
     System.out.println("Chair number: " + this.getChairNum());
-    System.out.println("Is furniture leather: " + this.isFurnitureLeather());
+    System.out.println("Is furniture leather: " + this.setIsFurnitureLeather());
     }
     }
