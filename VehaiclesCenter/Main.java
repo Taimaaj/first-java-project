@@ -50,23 +50,31 @@ public void  flushVars() {
         specialVar3="";
 }
 
-public void fuelType(){
-    String value = projectScanner.next();
-    if  (value == "D" ){
-     vehicleFuelType = FuelType.DIESEL;
+public String fuelType(boolean value){
+    if (value =="D" || value = "d" || value = "diesel" || value="Diesel"|| value="DIESEL"){
+        return FuelType.DIESEL;
+        System.out.println ( "You picked Diesel" );    
+    }else if(value == "G" || value = "g" || value = "gasloin" || value="Gasloin"|| value="GASOLINE"){
+       return FuelType.GASOLINE;
+       System.out.println ( "You picked Gasoline" );   
     }else{
-     vehicleFuelType = FuelType.GASOLINE;
-    }          
-}
+     return FuleType.UNDEFINED;
+     System.out.println ( "Unrecognized option" );    
+    }
+} 
 
-public void gearType(){
-    String value = projectScanner.next();
-    if  (value == "N" ){
-     vehicleGearType = GearType .NORMAL;
+public String gearType(String value){
+    if  (value == "N" || value = "n" || value= "normal"|| value= "Normal"|| value="NORMAL"){
+      vehicleGearType = GearType .NORMAL;
+      System.out.println ( "You picked Normal" );    
+    }else if(value == "A" || value = "a" || value = "Automatic" || value="automatic"|| value="AUTOMATIC"){
+       vehicleGearType = GearType .AUTOMATIC;
+       System.out.println ( "You picked Automatic" );    
     }else{
-     vehicleGearType = GearType .AUTOMATIC;
+        return GearType.UNDECIDED;
+        System.out.println ( "Unrecognized option" );    
+    }
     }      
-}
 
 public void fillEngineInfo(){
     System.out.println(">Please enter the manufactur of the engine: ");    
@@ -81,7 +89,7 @@ public void fillEngineInfo(){
     System.out.println(">Please enter the cylinders of the engine: ");
     engineCylenders= projectScanner.nextInt();
     System.out.println(">Please enter the FuelType of the engine( DIESEL[D] GASOLINE[G]): ");
-    fuelType();    
+    vehicleFuelType = fuelType(projectScanner.next());    
 }
 
 public void addCar() {
@@ -101,7 +109,7 @@ public void addCar() {
             System.out.println(">Please enter the color of car: ");
             vehicleColor= projectScanner.nextLine();
             System.out.println(">Please enter the GearType of car(NORMAL[N] AUTOMATIC [A] ): ");
-            gearType();
+            vehicleGearType = gearType(projectScanner.next());    
             System.out.print(">Please enter chairNum of the car: ");
             specialVar1= projectScanner.nextInt();
             System.out.println(">Please enter if isFurnitreLeather of car (t/f): ");
@@ -125,7 +133,7 @@ public void addTruck() {
             System.out.println(">Please enter the color of Truck: ");
             vehicleColor= projectScanner.nextLine();
             System.out.println(">Please enter the GearType of Truck(NORMAL[N] AUTOMATIC [A] ): ");
-            gearType();
+            vehicleGearType = gearType(projectScanner.next());    
             System.out.println(">Please enter the freeWight of Truck: ");
             specialVar1= projectScanner.nextBoolean();
             System.out.println(">Please enter fullWight of Truck:");
@@ -143,22 +151,63 @@ public void addMotorcycle() {
             System.out.println(">Please enter the bodySerailNum of Motorcycle: ");
             automobilePlateNum= projectScanner.nextLine();     
             System.out.println(">Please enter the GearType of Motorcycle(NORMAL[N] AUTOMATIC [A] ): ");
-            gearType();
+            vehicleGearType = gearType(projectScanner.next());    
             System.out.print(">Please enter tierDiameter of Motorcycle: ");
             specialVar1= projectScanner.nextBoolean();
             System.out.println(">Please enter length of Motorcycle: ");
             specialVar2=projectScanner.nextBoolean();
     }
     
-public String modify(){
- 
+public void modify(){
+    System.out.println("please enter the bodySerailNum you want to edit: ");
+    automobileBodySerailNum= projectScanner.nextLine();   
+    System.out.println("please enter new  bodySerailNum you want to replace: ");
+    String userValue= projectScanner.next();
+    Car newCar = new Car(); 
+    for( int i = 0; i < carList.size(); i++){
+        if(automobileBodySerailNum.equals(carList.get(i))){
+        carList.set(i,newCar );
+        }return;
+    }
 }
 
-public String Search(){
-    
+public void delete(){
+    Object userValue= projectScanner.next();
+    for (Car car :carList) {
+       if(car.getPlateNum().equals(userValue) ) {
+          carList.remove(userValue);
+       }
+    }
 }
 
-public String printAll(){
+public void Search(){
+  String searchPlateNum = projectScanner.next();
+  System.out.println("please enter new  the vehicle  you want to search about: ");
+  System.out.println ( "1) Car (1)\n2) Truck (2)\n3) Motorcycle (3)" );
+  menuOption = projectScanner.nextInt();
+    switch (menuOption) {
+    case 1:
+    for (Car car : carList) {
+            if (car.getPlateNum().equals(searchPlateNum)) {
+                System.out.println(car);
+            }
+    }
+    case 2:
+    for (Truck truck : truckList) {
+            if (truck.getPlateNum().equals(searchPlateNum)) {
+                System.out.println(truck);
+            }
+    }
+    case 3:
+    for (Motorcycle motorcycle : motorcycleList) {
+            if (motorcycle.getPlateNum().equals(searchPlateNum)) {
+                System.out.println(motorcycle);
+            }
+    }
+  }
+}
+
+public void printAll() throws java.text.ParseException{
     System.out.println("Please enter your Vehicle you want to show information ");
     System.out.println ( "1) Car (1)\n2) Truck (2)\n3) Motorcycle (3)" );
     menuOption= projectScanner.nextInt();
@@ -201,27 +250,40 @@ public void main(String args[])  throws java.text.ParseException {
             System.out.println();
        switch (menuOption ) {
         case 1:
+            /*
+             *     public Car(String manufactureCompany 
+             *     ,Date manufactureDate,
+             *     String model,
+             *     String plateNum
+             *     String bodySerailNum,
+             *     GearType gearType,
+             *     int length ,
+             *     int width
+             *     ,String color,
+             *     int chairNum,
+             *     boolean isFurnitreLeather) {
+
+             */
              addCar();
              Engine engine = new Engine(engineCompany,engineModel,engineDate,engineCylenders,enginecapacity,vehicleFuelType);
-             Car car = new Car(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleLength,vehicleColor,vehicleFuelType,vehicleGearType,vehicleColor,specialVar1,specialVar2);
+             Car car = new Car(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum,vehicleGearType,vehicleLength,vehicleWidth,vehicleColor,specialVar1,specialVar2);
              System.out.println("Car Creation and Addition Succeeded!");
              flushVars();
              break;
         case 2:
              addTruck();
-             Truck truck = new Truck(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleLength,vehicleWidth,vehicleColor,vehicleFuelType,vehicleGearType,specialVar1,specialVar2);
+             //Truck truck = new Truck(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleLength,vehicleWidth,vehicleColor,vehicleFuelType,vehicleGearType,specialVar1,specialVar2);
              System.out.println("Truck Creation and Addition Succeeded!");
              flushVars();
               break;
         case 3:
              addMotorcycle();
-             Motorcycle motorcycle = new Motorcycle(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleLength,vehicleWidth,vehicleColor,vehicleFuelType,vehicleGearType,specialVar1,specialVar2);
+             //Motorcycle motorcycle = new Motorcycle(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleLength,vehicleWidth,vehicleColor,vehicleFuelType,vehicleGearType,specialVar1,specialVar2);
              System.out.println("Motorcycle Creation and Addition Succeeded!");
              flushVars();
           break;
         }
        case 2:
-           Search();
        case 3:
             printAll();
        case 4:
