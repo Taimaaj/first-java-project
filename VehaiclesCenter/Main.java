@@ -66,10 +66,10 @@ public FuelType  fuelType(String value){
 public GearType gearType(String value){
     if (value.equals("N") || value .equals("n") || value .equals("normal") || value.equals("Normal")|| value.equals("NORMAL")){
       System.out.println ( "You picked Normal" );  
-      vehicleGearType = GearType .NORMAL;
+      return GearType .NORMAL;
     }else if (value.equals("A") || value .equals("a") || value .equals("Automatic") || value.equals("automatic")|| value.equals("AUTOMATIC")){
        System.out.println ( "You picked Automatic" );    
-       vehicleGearType = GearType .AUTOMATIC;
+       return GearType .AUTOMATIC;
     }else{
         System.out.println ( "Unrecognized option" );    
         return GearType.UNDECIDED;
@@ -206,20 +206,6 @@ public void Search(){
     }
   }
 }
-public void insert(){
-    /*
-     * String searchPlateNum = projectScanner.next();
-    System.out.println("please enter the vehicle  you want to add in: ");
-    System.out.println ( "1) Car (1)\n2) Truck (2)\n3) Motorcycle (3)" );
-    menuOption = projectScanner.nextInt();
-    for(int i=0; i < carList.size(); i++) {
-     if(carList.get(i).equals.IgnoreCase("brian")) {
-                carList.set(i, "Lokesh");
-            }
-   }
-     */
-    
-}
 
 public void printAll() throws java.text.ParseException{
     System.out.println("Please enter your Vehicle you want to show information ");
@@ -240,6 +226,7 @@ public void printAll() throws java.text.ParseException{
      }
  }
 }
+
 public void welcom(){
        System.out.println("                           🏍 🚚 🚗 Welcom in vechicles world 🚗 🚚 🏍️    ");
        System.out.println("please Enter your name");
@@ -259,49 +246,49 @@ public void welcom(){
        System.out.println();
 }
 
-public void main(String args[])  throws java.text.ParseException {
+public  void  main(String args[])  throws java.text.ParseException {
        welcom();
        switch (menuOption) {
-       case 1:
+        case 1:
             System.out.println("please enter your Vehicle you want to add:");
             System.out.println ( "1) Car (1)\n2) Truck (2)\n3) Motorcycle (3)" );
             System.out.println();
-       switch (menuOption ) {
-        case 1:
+        switch (menuOption ) {
+         case 1:
              addCar();
              Engine engine = new Engine(engineCompany,engineModel,engineDate,engineCylenders,enginecapacity,vehicleFuelType);
-             Car car = new Car(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum,vehicleGearType,vehicleLength,vehicleWidth,vehicleColor,specialVar1,specialVar2);
+             Car car = new Car(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum,vehicleGearType,vehicleLength,vehicleWidth,vehicleColor,(int)specialVar1,(boolean)specialVar2);
              System.out.println("Car Creation and Addition Succeeded!");
              flushVars();
              break;
-        case 2:
+         case 2:
              addTruck();
-             Truck truck = new Truck(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleGearType,vehicleLength,vehicleWidth,vehicleColor,specialVar1,specialVar2);
+            // Truck truck = new Truck(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleGearType,vehicleLength,vehicleWidth,vehicleColor,specialVar1,specialVar2);
              System.out.println("Truck Creation and Addition Succeeded!");
              flushVars();
               break;
-        case 3:
+         case 3:
              addMotorcycle();
-             Motorcycle motorcycle = new Motorcycle(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleGearType,specialVar1,specialVar2);
+            // Motorcycle motorcycle = new Motorcycle(engine,automobileCompany,automobileDate,automobileModel,automobilePlateNum,automobileBodySerailNum ,vehicleGearType,specialVar1,specialVar2);
              System.out.println("Motorcycle Creation and Addition Succeeded!");
              flushVars();
           break;
-        }
-       case 2:
-           delete();
-       case 3:
-            printAll();
-       case 4:
-           Search();
-       case 5:
+         }
+         case 2:
+            delete();
+         case 3:
+              printAll();
+         case 4:
+             Search();
+         case 5:
            
-       case 6:
-           modify();
-       case 7:
-           System.out.println("GoodBye");
-           welcom();
+         case 6:
+             modify();
+         case 7:
+             System.out.println("GoodBye");
+             welcom();
 
-       }
+         }
 }  
 }    
 
